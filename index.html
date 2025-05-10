@@ -4,83 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>粮油产品展示</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        h2 {
+            padding-left: 20px;
+            margin-top: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card h3 {
+            margin: 10px 0 5px;
+        }
+        .card p {
+            color: #e91e63;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>粮油产品展示</h1>
+        <h1>粮油产品展示网站</h1>
     </header>
 
     <main>
-        <!-- 五谷杂粮类 -->
-        <section class="category">
+        <section>
             <h2>五谷杂粮</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="images/product1.jpg" alt="五谷杂粮1">
-                    <h3>五谷杂粮产品1</h3>
-                    <p class="price">￥20</p>
-                </div>
-                <div class="product-card">
-                    <img src="images/product2.jpg" alt="五谷杂粮2">
-                    <h3>五谷杂粮产品2</h3>
-                    <p class="price">￥25</p>
-                </div>
-                <div class="product-card">
-                    <img src="images/product3.jpg" alt="五谷杂粮3">
-                    <h3>五谷杂粮产品3</h3>
-                    <p class="price">￥30</p>
-                </div>
-            </div>
+            <div class="grid" id="grain"></div>
         </section>
 
-        <!-- 油调料类 -->
-        <section class="category">
+        <section>
             <h2>油调料</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="images/product4.jpg" alt="油调料1">
-                    <h3>油调料产品1</h3>
-                    <p class="price">￥15</p>
-                </div>
-                <div class="product-card">
-                    <img src="images/product5.jpg" alt="油调料2">
-                    <h3>油调料产品2</h3>
-                    <p class="price">￥18</p>
-                </div>
-                <div class="product-card">
-                    <img src="images/product6.jpg" alt="油调料3">
-                    <h3>油调料产品3</h3>
-                    <p class="price">￥22</p>
-                </div>
-            </div>
+            <div class="grid" id="oil"></div>
         </section>
 
-        <!-- 其他类 -->
-        <section class="category">
+        <section>
             <h2>其他</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="images/product7.jpg" alt="其他产品1">
-                    <h3>其他产品1</h3>
-                    <p class="price">￥10</p>
-                </div>
-                <div class="product-card">
-                    <img src="images/product8.jpg" alt="其他产品2">
-                    <h3>其他产品2</h3>
-                    <p class="price">￥12</p>
-                </div>
-                <div class="product-card">
-                    <img src="images/product9.jpg" alt="其他产品3">
-                    <h3>其他产品3</h3>
-                    <p class="price">￥14</p>
-                </div>
-            </div>
+            <div class="grid" id="other"></div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 粮油产品展示网站</p>
+        <p>© 2025 粮油产品展示</p>
     </footer>
+
+    <script>
+        function generateProducts(category, containerId) {
+            const container = document.getElementById(containerId);
+            for (let i = 1; i <= 50; i++) {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <img src="images/${category}${i}.jpg" alt="${category}产品${i}">
+                    <h3>${category}产品${i}</h3>
+                    <p>￥${(Math.random() * 40 + 10).toFixed(2)}</p>
+                `;
+                container.appendChild(card);
+            }
+        }
+
+        generateProducts('五谷杂粮', 'grain');
+        generateProducts('油调料', 'oil');
+        generateProducts('其他', 'other');
+    </script>
 </body>
 </html>
