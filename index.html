@@ -14,7 +14,7 @@
     .grid { display: none; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; padding: 10px; }
     .grid.active { display: grid; }
     .card { background: white; border-radius: 5px; text-align: center; padding: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .card img { width: 100%; height: 100px; object-fit: cover; cursor: pointer; }
+    .card img { width: 100%; height: 120px; object-fit: cover; cursor: pointer; }
     .card h3 { margin: 5px 0; font-size: 14px; }
     .card p { color: #e91e63; margin: 0; font-size: 13px; }
     .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; }
@@ -32,14 +32,9 @@
 
   <div id="grains" class="grid active">
     <!-- 五谷杂粮商品 -->
-    <!-- BEGIN GRAINS -->
-    <div class="card"><img src="https://via.placeholder.com/150?text=小米" onclick="zoom(this.src)"><h3>小米</h3><p>￥6</p></div>
-    <div class="card"><img src="https://via.placeholder.com/150?text=大米" onclick="zoom(this.src)"><h3>大米</h3><p>￥7</p></div>
-    <div class="card"><img src="https://via.placeholder.com/150?text=玉米" onclick="zoom(this.src)"><h3>玉米</h3><p>￥8</p></div>
-    
-
-    <div class="card"><img src="images/皇家香米.jpg" onclick="zoom(this.src)"><h3>皇家香米</h3><p>35000/袋</p></div>    
-    <div class="card"><img src="images/泰国香米.png"  onclick="zoom(this.src)"><h3>泰国香米</h3><p>32000/袋</p></div>
+    <!-- BEGIN GRAINS -->    
+    <div class="card"><img src="images/皇家香米.jpg" onclick="zoom(this.src)"><h3>皇家香米</h3><p>32000/袋</p></div>    
+    <div class="card"><img src="images/泰国香米.png"  onclick="zoom(this.src)"><h3>茉莉香米</h3><p>25000/袋</p></div>
     <div class="card"><img src="images/大米-28.png"  onclick="zoom(this.src)"><h3>大米</h3><p>＄28/袋</p></div>
     <div class="card"><img src="images/小米-32.png"  onclick="zoom(this.src)"><h3>大米2</h3><p>＄32/袋</p></div>
     <div class="card"><img src="images/大米38.png"  onclick="zoom(this.src)"><h3>大米3</h3><p>＄38/袋</p></div>
@@ -47,108 +42,94 @@
     <div class="card"><img src="images/黑米.jpg"  onclick="zoom(this.src)"><h3>黑米</h3><p>5600/KG</p></div>
     <div class="card"><img src="images/糯米.jpg"  onclick="zoom(this.src)"><h3>糯米</h3><p>5500/KG</p></div>
     <div class="card"><img src="images/小米奴的.jpg"  onclick="zoom(this.src)"><h3>小米</h3><p>7500/KG</p></div>
-    <div class="card"><img src="images/花生6000.jpg"  onclick="zoom(this.src)"><h3>花生</h3><p>6000/KG</p></div>
-    <div class="card"><img src="images/花生-7500.jpg"  onclick="zoom(this.src)"><h3>本地花生</h3><p>8500/KG</p></div>
-    <div class="card"><img src="images/绿豆.jpg"  onclick="zoom(this.src)"><h3>绿豆</h3><p>5500/KG</p></div>
-    <div class="card"><img src="images/红豆.jpg"  onclick="zoom(this.src)"><h3>红豆</h3><p>6500/KG</p></div>
-        
-        <!-- 以下省略中间30项，为简洁演示结构，真实应用可继续添加 -->
-        
-    <div class="card"><img src="images/黄豆1.jpg"  onclick="zoom(this.src)"><h3>黄豆</h3><p>2900/KG</p></div>
-    <div class="card"><img src="images/粉条.jpg"  onclick="zoom(this.src)"><h3>粉条</h3><p>＄14.5/袋</p></div>
     <div class="card"><img src="images/面-蓝色.jpg"  onclick="zoom(this.src)"><h3>面粉</h3><p>＄17</p></div>
     <div class="card"><img src="images/面-绿色.jpg"  onclick="zoom(this.src)"><h3>面粉</h3><p>＄17</p></div>
-    <div class="card"><img src="images/红枣.jpg"  onclick="zoom(this.src)"><h3>大红枣</h3><p>20000</p></div>
-    <div class="card"><img src="images/红枣-18000.png"  onclick="zoom(this.src)"><h3>红枣</h3><p>18000</p></div>
-    <div class="card"><img src="images/豆筋.jpg"  onclick="zoom(this.src)"><h3>豆筋</h3><p>21000</p></div>
+    <div class="card"><img src="images/面-本地优质.png"  onclick="zoom(this.src)"><h3>面-本地优质</h3><p>＄37.5/袋</p></div>
+    <div class="card"><img src="images/花生6000.jpg"  onclick="zoom(this.src)"><h3>红皮花生</h3><p>6500/KG</p></div>
+    <div class="card"><img src="images/花生-7500.jpg"  onclick="zoom(this.src)"><h3>本地花生</h3><p>8500/KG</p></div>
+    <div class="card"><img src="images/红豆.jpg"  onclick="zoom(this.src)"><h3>红豆</h3><p>6500/KG</p></div>
+    <div class="card"><img src="images/黄豆1.jpg"  onclick="zoom(this.src)"><h3>黄豆</h3><p>2900/KG</p></div>
     <div class="card"><img src="images/黑芝麻.png"  onclick="zoom(this.src)"><h3>黑芝麻</h3><p>9000/KG</p></div>
     <div class="card"><img src="images/白芝麻.png"  onclick="zoom(this.src)"><h3>白芝麻</h3><p>9500/KG</p></div>
-    <div class="card"><img src="images/黑豆.png"  onclick="zoom(this.src)"><h3>黑豆</h3><p>6500/KG</p></div>
-    <div class="card"><img src="images/挂面-5500.jpg"  onclick="zoom(this.src)"><h3>挂面</h3><p>5500/把</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200"  onclick="zoom(this.src)"><h3>干木耳</h3><p>＄13/KG</p></div>
-
-
+    <div class="card"><img src="images/黑豆.png"  onclick="zoom(this.src)"><h3>黑豆</h3><p>6500/KG</p></div> 
+    <div class="card"><img src="images/陈醋-大桶.png"  onclick="zoom(this.src)"><h3>陈醋-大桶</h3><p>＄5.5</p></div>
+    <div class="card"><img src="images/陈醋-小瓶.png"  onclick="zoom(this.src)"><h3>陈醋-小瓶</h3><p>5500</p></div>
+    <div class="card"><img src="images/花椒.pngg"  onclick="zoom(this.src)"><h3>花椒</h3><p>38000/500G</p></div>
+    <div class="card"><img src="images/花生-2.png"  onclick="zoom(this.src)"><h3>红皮花生</h3><p>6500/KG</p></div>
+    <div class="card"><img src="images/绿豆.png"  onclick="zoom(this.src)"><h3>绿豆2</h3><p>5800/KG</p></div>
+    <div class="card"><img src="images/绿豆-5500.png"  onclick="zoom(this.src)"><h3>绿豆1</h3><p>5500/KG</p></div>
+    <div class="card"><img src="images/腰豆.png"  onclick="zoom(this.src)"><h3>腰豆</h3><p>6000/KG</p></div>
     
     <!-- 其余商品以此类推，复制粘贴上面结构修改即可 -->
-  </div>
 
+    
+  </div>
+ 
   <div id="oil" class="grid">
     <!-- 油调料商品 -->
     <!-- BEGIN OIL -->
-    <div class="card"><img src="https://via.placeholder.com/150?text=花生油" onclick="zoom(this.src)"><h3>花生油</h3><p>￥15</p></div>
-    <div class="card"><img src="https://via.placeholder.com/150?text=菜籽油" onclick="zoom(this.src)"><h3>菜籽油</h3><p>￥16</p></div>
-    <div class="card"><img src="https://via.placeholder.com/150?text=酱油" onclick="zoom(this.src)"><h3>酱油</h3><p>￥5</p></div>
-    
-
     <div class="card"><img src="images/桶油.jpg"  onclick="zoom(this.src)"><h3>食用油</h3><p>28000/桶</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200"  onclick="zoom(this.src)"><h3>花生油</h3><p>￥28.50</p></div>
-    <div class="card"><img src="images/酱油-生抽.jpg"  onclick="zoom(this.src)"><h3>酱油</h3><p>＄2.5/瓶</p></div>
+    <div class="card"><img src="images/豆油.png"  onclick="zoom(this.src)"><h3>豆油</h3><p>36000/桶</p></div>
+    <div class="card"><img src="images/葵花油.png"  onclick="zoom(this.src)"><h3>葵花油</h3><p>45000/桶</p></div>
+    
+    <div class="card"><img src="images/酱油-生抽.jpg"  onclick="zoom(this.src)"><h3>生抽</h3><p>＄2.5/瓶</p></div>
     <div class="card"><img src="images/老抽.jpg"  onclick="zoom(this.src)"><h3>老抽</h3><p>＄2.5/瓶</p></div>
-    <div class="card"><img src="images/盐.png"  onclick="zoom(this.src)"><h3>盐</h3><p>＄0.5/袋</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200"  onclick="zoom(this.src)"><h3>大豆油</h3><p>￥16.60</p></div>
     <div class="card"><img src="images/豆瓣酱.png"  onclick="zoom(this.src)"><h3>郫县豆瓣酱</h3><p>＄2.5/瓶</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200"  onclick="zoom(this.src)"><h3>白糖</h3><p>￥39.00</p></div>
-    <div class="card"><img src="images/生粉.jpg"  onclick="zoom(this.src)"><h3>生粉</h3><p>2000/袋</p></div>
+    <div class="card"><img src="images/豆瓣酱.png"  onclick="zoom(this.src)"><h3>黄豆酱</h3><p>9000/瓶</p></div>  
+    <div class="card"><img src="images/盐.png"  onclick="zoom(this.src)"><h3>盐</h3><p>＄0.5/袋</p></div>
+    <div class="card"><img src="images/白糖.png"  onclick="zoom(this.src)"><h3>白糖</h3><p>3500/KG</p></div>
     <div class="card"><img src="images/十三香.png"  onclick="zoom(this.src)"><h3>十三香</h3><p>2000/盒</p></div>
-
-        <!-- 以下省略40项 -->
-    <div class="card"><img src="images/蚝油.png"  onclick="zoom(this.src)"><h3>蚝油</h3><p>5500/瓶</p></div>
-    <div class="card"><img src="images/花椒粒.jpg"  onclick="zoom(this.src)"><h3>花椒</h3><p>28000/500G</p></div>
+    <div class="card"><img src="images/生粉.jpg"  onclick="zoom(this.src)"><h3>生粉</h3><p>2000/袋</p></div>
     <div class="card"><img src="images/鸡精.jpg"  onclick="zoom(this.src)"><h3>鸡精</h3><p>22000/袋</p></div>
-    <div class="card"><img src="images/老陈醋.jpg"  onclick="zoom(this.src)"><h3>老陈醋</h3><p>＄5.5/桶</p></div>
+    <div class="card"><img src="images/蚝油.png"  onclick="zoom(this.src)"><h3>蚝油</h3><p>5500/瓶</p></div>
     <div class="card"><img src="images/陈醋.jpg"  onclick="zoom(this.src)"><h3>陈醋</h3><p>5500/瓶</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200"  onclick="zoom(this.src)"><h3>白米醋</h3><p>5500/瓶</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200"  onclick="zoom(this.src)"><h3>香醋</h3><p>￥8.20</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200"  onclick="zoom(this.src)"><h3>料酒</h3><p>￥6.50</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200"  onclick="zoom(this.src)"><h3>腐乳</h3><p>￥5.80</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200"  onclick="zoom(this.src)"><h3>辣酱</h3><p>￥7.90</p></div>
-
+    <div class="card"><img src="images/白米醋.jpg"  onclick="zoom(this.src)"><h3>白米醋</h3><p>5500/瓶</p></div>
+    <div class="card"><img src="images/花椒粒.jpg"  onclick="zoom(this.src)"><h3>花椒</h3><p>28000/500G</p></div>
+    <div class="card"><img src="images/八角大料.png"  onclick="zoom(this.src)"><h3>八角大料</h3><p>28000/KG</p></div>
+    <div class="card"><img src="images/桂皮.png"  onclick="zoom(this.src)"><h3>桂皮</h3><p>18000/KG</p></div>
     
     <!-- 更多商品结构相同可复制添加 -->
+    
+    
   </div>
 
   <div id="dry" class="grid">
     <!-- 干货商品 -->
     <!-- BEGIN DRY -->
-    <div class="card"><img src="https://via.placeholder.com/150?text=木耳" onclick="zoom(this.src)"><h3>木耳</h3><p>￥12</p></div>
-    <div class="card"><img src="https://via.placeholder.com/150?text=香菇" onclick="zoom(this.src)"><h3>香菇</h3><p>￥14</p></div>
-    <div class="card"><img src="https://via.placeholder.com/150?text=海带" onclick="zoom(this.src)"><h3>海带</h3><p>￥10</p></div>
-    
-    <div class="card"><img src="images/榨菜.jpg"  onclick="zoom(this.src)"><h3>榨菜</h3><p>＄27/箱</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200"  onclick="zoom(this.src)"><h3>冰糖</h3><p>￥5.20</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200"  onclick="zoom(this.src)"><h3>红糖</h3><p>￥6.00</p></div>
-
+    <div class="card"><img src="images/挂面-5500.png"  onclick="zoom(this.src)"><h3>挂面</h3><p>5500/把</p></div>
+    <div class="card"><img src="images/粉条.jpg"  onclick="zoom(this.src)"><h3>粉条</h3><p>＄14/袋</p></div>
+    <div class="card"><img src="images/海带丝.png"  onclick="zoom(this.src)"><h3>海带丝</h3><p>5000/个</p></div> 
+    <div class="card"><img src="images/木耳.jpg"  onclick="zoom(this.src)"><h3>木耳</h3><p>＄14/KG</p></div>
+    <div class="card"><img src="images/长粉条.png"  onclick="zoom(this.src)"><h3>长粉条</h3><p>2.2/KG</p></div>
+    <div class="card"><img src="images/紫菜.png"  onclick="zoom(this.src)"><h3>紫菜</h3><p>2000/个</p></div>
+    <div class="card"><img src="images/豆筋.jpg"  onclick="zoom(this.src)"><h3>豆筋</h3><p>21000</p></div>
     
     <!-- 更多商品可按格式继续添加 -->
+
+    
   </div>
 
   <div id="other" class="grid">
     <!-- 其他商品 -->
-    <!-- BEGIN OTHER -->
-    <div class="card"><img src="https://via.placeholder.com/150?text=方便面" onclick="zoom(this.src)"><h3>方便面</h3><p>￥4</p></div>
-    <div class="card"><img src="https://via.placeholder.com/150?text=挂面" onclick="zoom(this.src)"><h3>挂面</h3><p>￥5</p></div>
-    <div class="card"><img src="https://via.placeholder.com/150?text=米粉" onclick="zoom(this.src)"><h3>米粉</h3><p>￥6</p></div>
-
-    <div class="card"><img src="https://via.placeholder.com/200" alt="八角"><h3>八角</h3><p>￥2.90</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200" alt="香叶"><h3>香叶</h3><p>￥2.70</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200" alt="桂皮"><h3>桂皮</h3><p>￥3.10</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200" alt="孜然"><h3>孜然</h3><p>￥3.40</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200" alt="咖喱粉"><h3>咖喱粉</h3><p>￥4.10</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200" alt="花椒"><h3>花椒</h3><p>￥5.50</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200" alt="干辣椒"><h3>干辣椒</h3><p>￥4.60</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200" alt="香菇"><h3>香菇</h3><p>￥9.80</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200" alt="木耳"><h3>木耳</h3><p>￥8.70</p></div>
-    <div class="card"><img src="https://via.placeholder.com/200" alt="紫菜"><h3>紫菜</h3><p>￥6.90</p></div>
-
+    <!-- BEGIN OTHER -->      
+    
+    <div class="card"><img src="images/红枣.jpg"  onclick="zoom(this.src)"><h3>大红枣</h3><p>20000</p></div>
+    <div class="card"><img src="images/红枣-18000.png"  onclick="zoom(this.src)"><h3>红枣</h3><p>18000</p></div>
+    <div class="card"><img src="images/榨菜.jpg"  onclick="zoom(this.src)"><h3>榨菜</h3><p>＄27/箱</p></div>
+    <div class="card"><img src="images/安琪酵母.png"  onclick="zoom(this.src)"><h3>安琪酵母</h3><p>8000/袋</p></div>
+    <div class="card"><img src="images/30L大桶.png"  onclick="zoom(this.src)"><h3>30L大桶</h3><p>9000/个</p></div>
+     
     
     <!-- 自行按需继续复制添加商品块 -->
+
+    
   </div>
 
   <div id="modal" class="modal" onclick="this.style.display='none';">
     <img id="modalImg" src="" alt="放大图">
   </div>
 
-  <footer><p>© 2025 粮油展示</p></footer>
+  <footer><p>© 2025 诚信粮油</p></footer>
 
   <script>
     function show(id) {
