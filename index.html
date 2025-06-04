@@ -28,6 +28,7 @@
     <button onclick="show('oil')">油、调料</button>
     <button onclick="show('dry')">干货</button>
     <button onclick="show('other')">其他-日用品</button>
+    <button onclick="show('other')">酒精、口罩</button>
   </div>
 
   <div id="grains" class="grid active">
@@ -158,6 +159,18 @@
     <!-- 自行按需继续复制添加商品块 -->
 
     
+  </div>
+
+   <div id="dry" class="grid">
+    <!-- 酒精、口罩 -->
+    <!-- BEGIN Alcohol -->
+    <div class="card"><img src="images/酒精-小瓶.png"  onclick="zoom(this.src)"><h3>酒精-小瓶</h3><p>＄8.5/件（12小瓶）</p></div>
+    <div class="card"><img src="images/酒精-大瓶.png"  onclick="zoom(this.src)"><h3>酒精-大瓶</h3><p>＄8.5/件（6大瓶）</p></div>
+    <div class="card"><img src="images/小喷壶.png"  onclick="zoom(this.src)"><h3>小喷壶</h3><p>＄0.3/个</p></div>
+    <div class="card"><img src="images/大喷壶.png"  onclick="zoom(this.src)"><h3>大喷壶</h3><p>＄0.6/个</p></div>
+    <div class="card"><img src="images/口罩.png"  onclick="zoom(this.src)"><h3>口罩</h3><p>＄1.2/盒（50个）</p></div>
+
+    <!-- 更多商品可按格式继续添加 -->
   </div>
 
   <div id="modal" class="modal" onclick="this.style.display='none';">
