@@ -27,8 +27,10 @@
     <button onclick="show('grains')">五谷杂粮</button>
     <button onclick="show('oil')">油、调料</button>
     <button onclick="show('dry')">干货</button>
+    <button onclick="show('food')">好吃的</button>
     <button onclick="show('other')">生活日用品</button>
     <button onclick="show('Alcohol')">酒精、口罩</button>
+    <button onclick="show('sun')">太阳能风扇</button>
   </div>
 
   <div id="grains" class="grid active">
@@ -77,6 +79,8 @@
     <div class="card"><img src="images/料酒.png"  onclick="zoom(this.src)"><h3>料酒</h3><p>＄2.3/瓶</p></div>
    
     <div class="card"><img src="images/豆瓣酱.png"  onclick="zoom(this.src)"><h3>郫县豆瓣酱</h3><p>＄2.3/瓶</p></div>
+    <div class="card"><img src="images/麻公辣婆.png"  onclick="zoom(this.src)"><h3>麻公辣婆</h3><p>＄2.3/瓶</p></div>
+   
     <div class="card"><img src="images/豆瓣酱大瓶.png"  onclick="zoom(this.src)"><h3>豆瓣酱大瓶</h3><p>＄7/瓶</p></div>
     
     <div class="card"><img src="images/黄豆酱.png"  onclick="zoom(this.src)"><h3>黄豆酱</h3><p>2.3/瓶</p></div>  
@@ -127,8 +131,8 @@
     <!-- 干货商品 -->
     <!-- BEGIN DRY -->
     <div class="card"><img src="images/意大利面.png"  onclick="zoom(this.src)"><h3>意大利面</h3><p>6500/包</p></div>
-    <div class="card"><img src="images/挂面-5500.png"  onclick="zoom(this.src)"><h3>挂面</h3><p>5000/把</p></div>
-    <div class="card"><img src="images/挂面-5500.png"  onclick="zoom(this.src)"><h3>挂面</h3><p>＄18/提（15把）</p></div>
+    <div class="card"><img src="images/挂面-5500.png"  onclick="zoom(this.src)"><h3>挂面</h3><p>5300/把</p></div>
+    <div class="card"><img src="images/挂面-5500.png"  onclick="zoom(this.src)"><h3>挂面</h3><p>＄18.5/提（15把）</p></div>
     <div class="card"><img src="images/热干面.png"  onclick="zoom(this.src)"><h3>热干面</h3><p>＄23/提（15把）</p></div>
     <div class="card"><img src="images/粉条.jpg"  onclick="zoom(this.src)"><h3>粉条</h3><p>＄14/袋（7.5KG）</p></div>
     <div class="card"><img src="images/兴兴粉丝.png"  onclick="zoom(this.src)"><h3>兴兴粉丝</h3><p>＄1/袋（1斤）</p></div>
@@ -142,15 +146,13 @@
     <div class="card"><img src="images/香菇-10.png"  onclick="zoom(this.src)"><h3>香菇</h3><p>＄10/KG</p></div>
     <div class="card"><img src="images/干香菇.png"  onclick="zoom(this.src)"><h3>干香菇</h3><p>＄11/KG</p></div>
     <div class="card"><img src="images/腐竹.png"  onclick="zoom(this.src)"><h3>腐竹</h3><p>21000/KG</p></div>
-
+    <div class="card"><img src="images/银耳.png"  onclick="zoom(this.src)"><h3>银耳</h3><p>＄5/袋</p></div>
+   
     <div class="card"><img src="images/海带.png"  onclick="zoom(this.src)"><h3>海带</h3><p>＄16/袋（4KG）</p></div>
 
     
     <div class="card"><img src="images/永顺粉条.png"  onclick="zoom(this.src)"><h3>永顺粉条-包</h3><p>＄1/包</p></div>
-    <div class="card"><img src="images/压缩饼干.png"  onclick="zoom(this.src)"><h3>压缩饼干</h3><p>＄14/盒</p></div>
-    <div class="card"><img src="images/九蔬饼干.png"  onclick="zoom(this.src)"><h3>九蔬饼干</h3><p>6000/袋（328g）</p></div>
-    <div class="card"><img src="images/九蔬脆皮饼干.png"  onclick="zoom(this.src)"><h3>九蔬脆皮饼干</h3><p>＄2/袋（20x20g）</p></div>
-   <div class="card"><img src="images/海苔味饼干.png"  onclick="zoom(this.src)"><h3>海苔味饼干</h3><p>6000/袋（328g）</p></div>
+
     <div class="card"><img src="images/火锅底料.png"  onclick="zoom(this.src)"><h3>火锅底料</h3><p>＄2/袋</p></div>
     
     <div class="card"><img src="images/火锅川粉.png"  onclick="zoom(this.src)"><h3>火锅川粉</h3><p>＄0.6/包</p></div>
@@ -160,39 +162,33 @@
     
     <div class="card"><img src="images/豆豉鲮鱼罐头.png"  onclick="zoom(this.src)"><h3>豆豉鲮鱼罐头</h3><p>＄2/盒（整箱24盒47）</p></div>
     <div class="card"><img src="images/午餐肉罐头.png"  onclick="zoom(this.src)"><h3>午餐肉罐头</h3><p>＄2/罐（整箱24罐47）</p></div>
-    <div class="card"><img src="images/蚕豆.png"  onclick="zoom(this.src)"><h3>果仁、蚕豆</h3><p>2500/袋</p></div>
-    <div class="card"><img src="images/甘源-果仁.png"  onclick="zoom(this.src)"><h3>甘源-果仁</h3><p>＄2.8/斤</p></div>
-    <div class="card"><img src="images/小火腿肠.png"  onclick="zoom(this.src)"><h3>小火腿肠</h3><p>＄1/袋</p></div>
-    <div class="card"><img src="images/大火腿肠.png"  onclick="zoom(this.src)"><h3>大火腿肠</h3><p>＄2/袋</p></div>
+
 
      
     <!-- 更多商品可按格式继续添加 -->
   </div>
   
-  <div id="other" class="grid">
-    <!-- 其他商品 -->
+  <div id="food" class="grid">
+    <!-- 好吃的 -->
     <!-- BEGIN OTHER -->      
-    <div class="card"><img src="images/矿泉水.png"  onclick="zoom(this.src)"><h3>矿泉水.大瓶1.5L</h3><p>＄3.9/箱(12瓶)【送水3箱以上需加2元运费】</p></div>
-    <div class="card"><img src="images/矿泉水.png"  onclick="zoom(this.src)"><h3>矿泉水.小瓶500ml</h3><p>＄2.9/箱(24瓶)【送水3箱以上需加2元运费】</p></div>
-    <div class="card"><img src="images/百事可乐.png"  onclick="zoom(this.src)"><h3>百事可乐</h3><p>＄11/箱(24瓶，500ml)</p></div>
-   <div class="card"><img src="images/枣花蜂蜜.png"  onclick="zoom(this.src)"><h3>枣花蜂蜜</h3><p>＄2/瓶</p></div>
-   <div class="card"><img src="images/蜂蜜.png"  onclick="zoom(this.src)"><h3>蜂蜜</h3><p>＄3.3/瓶</p></div>
-   <div class="card"><img src="images/太古单晶冰糖.png"  onclick="zoom(this.src)"><h3>太古单晶冰糖</h3><p>＄1.5/袋</p></div>
+
    <div class="card"><img src="images/Fudo面包.png"  onclick="zoom(this.src)"><h3>Fudo面包</h3><p>9000/盒</p></div>
    <div class="card"><img src="images/小面包.png"  onclick="zoom(this.src)"><h3>小面包</h3><p>6500/盒(15小包)</p></div>
     <div class="card"><img src="images/小点心.png"  onclick="zoom(this.src)"><h3>小点心</h3><p>8500/盒(20小包)</p></div>  
-    <div class="card"><img src="images/北海道土司面包.png"  onclick="zoom(this.src)"><h3>北海道土司面包</h3><p>3000/个</p></div>
-   <div class="card"><img src="images/卤蛋.png"  onclick="zoom(this.src)"><h3>卤蛋</h3><p>＄3.2/10颗</p></div>
+    <div class="card"><img src="images/北海道土司面包.png"  onclick="zoom(this.src)"><h3>北海道土司面包</h3><p>2800/个</p></div>
+   
+    <div class="card"><img src="images/铜锣烧.png"  onclick="zoom(this.src)"><h3>铜锣烧</h3><p>＄12000/(包)</p></div>
+    <div class="card"><img src="images/肉酥饼.png"  onclick="zoom(this.src)"><h3>肉酥饼</h3><p>＄8000/(盒)</p></div>  
+   
+  
    <div class="card"><img src="images/泡芙牛油果.png"  onclick="zoom(this.src)"><h3>泡芙雪媚娘</h3><p>＄3.5/KG</p></div>
-    
-    <div class="card"><img src="images/榨菜.jpg"  onclick="zoom(this.src)"><h3>榨菜</h3><p>＄25/箱（100包）</p></div>
-    <div class="card"><img src="images/榨菜丝.png"  onclick="zoom(this.src)"><h3>榨菜丝</h3><p>＄22/箱（100包，不辣）</p></div>
-    
-    <div class="card"><img src="images/方便面.png"  onclick="zoom(this.src)"><h3>方便面</h3><p>28000/箱（50包）</p></div>
-    <div class="card"><img src="images/方便面2.png"  onclick="zoom(this.src)"><h3>方便面2</h3><p>＄8.5/箱（40包）</p></div>
-    <div class="card"><img src="images/方便面3.png"  onclick="zoom(this.src)"><h3>方便面3</h3><p>＄6/箱（24包）</p></div>
-
-    
+    <div class="card"><img src="images/泡芙牛油果.png"  onclick="zoom(this.src)"><h3>牛奶泡芙</h3><p>＄3.5/KG</p></div>
+ <div class="card"><img src="images/卤蛋.png"  onclick="zoom(this.src)"><h3>卤蛋</h3><p>＄3.2/10颗</p></div>
+ <div class="card"><img src="images/泡鸡爪.png"  onclick="zoom(this.src)"><h3>泡鸡爪</h3><p>＄3.5/10个</p></div>
+ <div class="card"><img src="images/泡鸭掌.png"  onclick="zoom(this.src)"><h3>泡鸭掌</h3><p>＄3.5/10个</p></div>
+   
+   
+   
     <div class="card"><img src="images/Lactasoy豆奶.png"  onclick="zoom(this.src)"><h3>Lactasoy豆奶</h3><p>＄9/箱(12包)</p></div>
     <div class="card"><img src="images/巧克力奶.png"  onclick="zoom(this.src)"><h3>巧克力奶</h3><p>＄10/箱(12包)</p></div>
     
@@ -208,6 +204,47 @@
     <div class="card"><img src="images/咖啡.png"  onclick="zoom(this.src)"><h3>咖啡</h3><p>＄4.5/袋</p></div>    
     <div class="card"><img src="images/豆浆粉.png"  onclick="zoom(this.src)"><h3>豆浆粉</h3><p>＄2.5/袋</p></div> 
    <div class="card"><img src="images/黑芝麻糊.png"  onclick="zoom(this.src)"><h3>黑芝麻糊</h3><p>＄4/袋</p></div> 
+
+   
+
+    <div class="card"><img src="images/小火腿肠.png"  onclick="zoom(this.src)"><h3>小火腿肠</h3><p>＄1/袋</p></div>
+    <div class="card"><img src="images/大火腿肠.png"  onclick="zoom(this.src)"><h3>大火腿肠</h3><p>＄2/袋</p></div>
+
+       <div class="card"><img src="images/压缩饼干.png"  onclick="zoom(this.src)"><h3>压缩饼干</h3><p>＄14/盒</p></div>
+    <div class="card"><img src="images/九蔬饼干.png"  onclick="zoom(this.src)"><h3>九蔬饼干</h3><p>6000/袋（328g）</p></div>
+    <div class="card"><img src="images/九蔬脆皮饼干.png"  onclick="zoom(this.src)"><h3>九蔬脆皮饼干</h3><p>＄2/袋（20x20g）</p></div>
+   <div class="card"><img src="images/海苔味饼干.png"  onclick="zoom(this.src)"><h3>海苔味饼干</h3><p>6000/袋（328g）</p></div>
+   <div class="card"><img src="images/比利时风味饼干.png"  onclick="zoom(this.src)"><h3>比利时风味饼干</h3><p>9000/盒</p></div>
+
+    <div class="card"><img src="images/蚕豆.png"  onclick="zoom(this.src)"><h3>果仁、蚕豆</h3><p>2500/袋</p></div>
+    <div class="card"><img src="images/甘源-果仁.png"  onclick="zoom(this.src)"><h3>甘源-果仁</h3><p>＄2.8/斤</p></div>
+   
+    <div class="card"><img src="images/方便面.png"  onclick="zoom(this.src)"><h3>方便面</h3><p>28000/箱（50包）</p></div>
+    <div class="card"><img src="images/方便面2.png"  onclick="zoom(this.src)"><h3>方便面2</h3><p>＄8.5/箱（40包）</p></div>
+    <div class="card"><img src="images/方便面3.png"  onclick="zoom(this.src)"><h3>方便面3</h3><p>＄6/箱（24包）</p></div>
+   <div class="card"><img src="images/康师傅牛肉面.png"  onclick="zoom(this.src)"><h3>康师傅牛肉面</h3><p>＄13/箱（24包）</p></div>
+   
+    <!-- 自行按需继续复制添加商品块 -->
+
+    
+  </div>
+
+
+
+   <div id="other" class="grid">
+    <!-- 生活日用品 -->
+    <!-- BEGIN OTHER -->      
+    <div class="card"><img src="images/矿泉水.png"  onclick="zoom(this.src)"><h3>矿泉水.大瓶1.5L</h3><p>＄3.9/箱(12瓶)【送水3箱以上需加2元运费】</p></div>
+    <div class="card"><img src="images/矿泉水.png"  onclick="zoom(this.src)"><h3>矿泉水.小瓶500ml</h3><p>＄2.9/箱(24瓶)【送水3箱以上需加2元运费】</p></div>
+    <div class="card"><img src="images/百事可乐.png"  onclick="zoom(this.src)"><h3>百事可乐</h3><p>＄11/箱(24瓶，500ml)</p></div>
+   <div class="card"><img src="images/枣花蜂蜜.png"  onclick="zoom(this.src)"><h3>枣花蜂蜜</h3><p>＄2/瓶</p></div>
+   <div class="card"><img src="images/蜂蜜.png"  onclick="zoom(this.src)"><h3>蜂蜜</h3><p>＄3.3/瓶</p></div>
+   <div class="card"><img src="images/太古单晶冰糖.png"  onclick="zoom(this.src)"><h3>太古单晶冰糖</h3><p>＄1.5/袋</p></div>
+
+    
+    <div class="card"><img src="images/榨菜.jpg"  onclick="zoom(this.src)"><h3>榨菜</h3><p>＄25/箱（100包）</p></div>
+    <div class="card"><img src="images/榨菜丝.png"  onclick="zoom(this.src)"><h3>榨菜丝</h3><p>＄22/箱（100包，不辣）</p></div>
+    
    
     <div class="card"><img src="images/泰国洗头膏.png"  onclick="zoom(this.src)"><h3>泰国洗头膏</h3><p>＄3/瓶（350ml）</p></div>
     <div class="card"><img src="images/泰国洗头膏.png"  onclick="zoom(this.src)"><h3>泰国洗头膏</h3><p>＄4.5/瓶（600ml）</p></div>
@@ -274,6 +311,12 @@
     
   </div>
 
+
+
+
+
+
+ 
    <div id="Alcohol" class="grid">
     <!-- 酒精、口罩 -->
     <!-- BEGIN ALCOHOL -->
@@ -291,6 +334,26 @@
 
     <!-- 更多商品可按格式继续添加 -->
   </div>
+
+   <div id="sun" class="grid">
+    <!-- 太阳能风扇 -->
+    <!-- BEGIN ALCOHOL -->
+     <div class="card"><img src="images/太阳能风扇.png"  onclick="zoom(this.src)"><h3>太阳能风扇</h3><p>＄51/套</p></div>
+    
+    <div class="card"><img src="images/1.风扇.png"  onclick="zoom(this.src)"><h3>风扇</h3><p> </p></div>
+    <div class="card"><img src="images/2.太阳能板及参数.png"  onclick="zoom(this.src)"><h3>太阳能板及参数</h3><p> </p></div>
+        <div class="card"><img src="images/3.风扇带的电瓶参数.png"  onclick="zoom(this.src)"><h3>风扇带的电瓶参数</h3><p> </p></div>
+    <div class="card"><img src="images/4.风扇自带的小灯、USB口.png"  onclick="zoom(this.src)"><h3>风扇自带的小灯、USB口</h3><p> </p></div>
+        <div class="card"><img src="images/5.风扇可以摇头、升降.png"  onclick="zoom(this.src)"><h3>风扇可以摇头、升降</h3><p> </p></div>
+    <div class="card"><img src="images/6.附带的遥控、灯、充电器线.png"  onclick="zoom(this.src)"><h3>附带的遥控、灯、充电器线</h3><p> </p></div>
+        <div class="card"><img src="7.直连线充电口.png"  onclick="zoom(this.src)"><h3>直连线充电口</h3><p></p></div>
+
+   
+    
+
+    <!-- 更多商品可按格式继续添加 -->
+  </div>
+ 
 
   <div id="modal" class="modal" onclick="this.style.display='none';">
     <img id="modalImg" src="" alt="放大图">
