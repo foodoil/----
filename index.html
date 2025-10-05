@@ -31,6 +31,7 @@
     <button onclick="show('other')">生活日用品</button>
     <button onclick="show('Alcohol')">酒精、口罩</button>
     <button onclick="show('sun')">太阳能、蓝牙耳机</button>
+    <button onclick="show('sun')">蚊帐、床单被子</button>
   </div>
 
   <div id="grains" class="grid active">
@@ -190,7 +191,10 @@
   <div id="food" class="grid">
     <!-- 好吃的 -->
     <!-- BEGIN OTHER -->      
-<div class="card"><img src="images/桂圆2.png"  onclick="zoom(this.src)"><h3>桂圆（有货）</h3><p>10000/4KG</p></div>
+<div class="card"><img src="images/葡萄.png"  onclick="zoom(this.src)"><h3>葡萄（有货）</h3><p>8000/KG</p></div>
+   <div class="card"><img src="images/桂圆2.png"  onclick="zoom(this.src)"><h3>桂圆（有货）</h3><p>10000/4KG</p></div>
+
+   
    <div class="card"><img src="images/本地鸡蛋.png"  onclick="zoom(this.src)"><h3>本地鸡蛋（2#）</h3><p>500/颗</p></div>
     <div class="card"><img src="images/大鸡蛋.png"  onclick="zoom(this.src)"><h3>本地大鸡蛋（1#）</h3><p>550/颗</p></div>
    <div class="card"><img src="images/鸭嫂松花皮蛋.png"  onclick="zoom(this.src)"><h3>鸭嫂松花皮蛋</h3><p>10000/盒</p></div>
@@ -421,9 +425,6 @@
 
 
 
-
-
-
  
    <div id="Alcohol" class="grid">
     <!-- 酒精、口罩 -->
@@ -468,6 +469,22 @@
   </div>
  
 
+  <div id="sun" class="grid">
+    <!-- 蚊帐、床单被子 -->
+    <!-- BEGIN ALCOHOL -->
+   
+<div class="card"><img src="images/床单.png"  onclick="zoom(this.src)"><h3>床单</h3><p>＄/个</p></div>
+   <div class="card"><img src="images/蚊帐.png"  onclick="zoom(this.src)"><h3>蚊帐</h3><p>＄/套</p></div>
+    
+  <div class="card"><img src="images/大豆棉夏凉被.png"  onclick="zoom(this.src)"><h3>大豆棉夏凉被</h3><p>＄/套</p></div>
+<div class="card"><img src="images/水洗棉夏凉被.png"  onclick="zoom(this.src)"><h3>水洗棉夏凉被</h3><p>＄/套</p></div>
+    
+
+    <!-- 更多商品可按格式继续添加 -->
+  </div>
+
+
+ 
   <div id="modal" class="modal" onclick="this.style.display='none';">
     <img id="modalImg" src="" alt="放大图">
   </div>
@@ -486,6 +503,7 @@
   </script>
 </body>
 </html>
+
 
 
 
