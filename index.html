@@ -36,7 +36,9 @@
  <script>
 let searchData = [];
 
-fetch('/search.json')
+const base = window.location.pathname.split('/')[1];
+fetch(`/${base}/search.json`);
+
   .then(res => res.json())
   .then(data => searchData = data);
 
@@ -815,6 +817,7 @@ document.getElementById('searchInput').addEventListener('input', function () {
   </script>
 </body>
 </html>
+
 
 
 
