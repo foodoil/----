@@ -75,46 +75,7 @@ document.getElementById('searchInput').addEventListener('input', function () {
   style="width: 300px; padding: 8px; margin-bottom: 10px;"
 >
 
-<table id="productTable" border="1" cellspacing="0" cellpadding="6">
-  <thead>
-    <tr>
-      <th>商品名称</th>
-      <th>分类</th>
-      <th>价格</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>玉米油</td>
-      <td>食用油</td>
-      <td>$10</td>
-    </tr>
-    <tr>
-      <td>口罩</td>
-      <td>医疗用品</td>
-      <td>$2</td>
-    </tr>
-    <tr>
-      <td>蓝牙耳机</td>
-      <td>电子产品</td>
-      <td>$30</td>
-    </tr>
-  </tbody>
-</table>
-
- <script>
-document.getElementById('productSearch').addEventListener('input', function () {
-  const keyword = this.value.toLowerCase().trim();
-  const rows = document.querySelectorAll('#productTable tbody tr');
-
-  rows.forEach(row => {
-    const text = row.textContent.toLowerCase();
-    row.style.display = text.includes(keyword) ? '' : 'none';
-  });
-});
-</script>
-
-
+<input type="text" id="productSearch" placeholder="搜索商品...">
 
  
 <body>
@@ -863,6 +824,7 @@ document.getElementById('productSearch').addEventListener('input', function () {
   </script>
 </body>
 </html>
+
 
 
 
