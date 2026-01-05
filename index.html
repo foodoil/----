@@ -33,14 +33,20 @@
 
 <ul id="searchResults" style="list-style:none;padding-left:0;"></ul>
 
- <script>
+<script>
+const repo = '----';   // 你的仓库名
 let searchData = [];
 
-const base = window.location.pathname.split('/')[1];
-fetch(`/${base}/search.json`);
-
-  .then(res => res.json())
-  .then(data => searchData = data);
+fetch(`/${repo}/search.json`)
+  .then(res => {
+    if (!res.ok) throw new Error('search.json 加载失败');
+    return res.json();
+  })
+  .then(data => {
+    searchData = data;
+    console.log('搜索数据已加载', data);
+  })
+  .catch(err => console.error(err));
 
 document.getElementById('searchInput').addEventListener('input', function () {
   const keyword = this.value.trim().toLowerCase();
@@ -56,12 +62,7 @@ document.getElementById('searchInput').addEventListener('input', function () {
     )
     .forEach(item => {
       const li = document.createElement('li');
-      li.innerHTML = `
-        <a href="${item.url}" style="text-decoration:none;color:#305496;">
-          ${item.title}
-        </a>
-      `;
-      li.style.margin = '8px 0';
+      li.innerHTML = `<a href="${item.url}">${item.title}</a>`;
       list.appendChild(li);
     });
 });
@@ -817,6 +818,7 @@ document.getElementById('searchInput').addEventListener('input', function () {
   </script>
 </body>
 </html>
+
 
 
 
