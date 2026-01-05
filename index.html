@@ -792,33 +792,51 @@
   </div>
 
 
-<!-- 页面内搜索 JS -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const input = document.getElementById('productSearch');
-      const items = document.querySelectorAll('#productList .product-item');
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('productSearch'); // 搜索框ID
+  const items = document.querySelectorAll('#productList .product-item'); // 商品div主class
 
-      input.addEventListener('input', function() {
-        const keyword = this.value.toLowerCase().trim();
+  input.addEventListener('input', function() {
+    const keyword = this.value.toLowerCase().trim();
 
-        items.forEach(item => {
-          const text = item.textContent.toLowerCase();
-          // 包含关键字就显示，否则隐藏
-          if (text.includes(keyword)) {
-            item.classList.remove('hidden');
-          } else {
-            item.classList.add('hidden');
-          }
-        });
-      });
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+
+      // 显示或隐藏商品
+      if (text.includes(keyword)) {
+        item.style.display = '';
+
+        // 高亮匹配词
+        if (keyword) {
+          // 原始文本
+          const originalText = item.textContent;
+
+          // 创建高亮HTML
+          const regex = new RegExp(`(${keyword})`, 'gi');
+          const highlighted = originalText.replace(regex, '<span style="background-color: yellow;">$1</span>');
+
+          item.innerHTML = highlighted;
+        } else {
+          // 输入为空时恢复原始文本
+          item.innerHTML = item.textContent;
+        }
+
+      } else {
+        item.style.display = 'none';
+      }
     });
-  </script>
+  });
+});
+</script>
+
 
 
 
  
 </body>
 </html>
+
 
 
 
