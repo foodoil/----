@@ -22,63 +22,16 @@
   </style>
 </head>
 
-<div style="margin:20px 0;">
-  <input
-    type="text"
-    id="searchInput"
-    placeholder="搜索网站内容..."
-    style="width:320px;padding:10px;font-size:16px;"
-  >
-</div>
 
-<ul id="searchResults" style="list-style:none;padding-left:0;"></ul>
-
-<script>
-const repo = '----';   // 你的仓库名
-let searchData = [];
-
-fetch(`/${repo}/search.json`)
-  .then(res => {
-    if (!res.ok) throw new Error('search.json 加载失败');
-    return res.json();
-  })
-  .then(data => {
-    searchData = data;
-    console.log('搜索数据已加载', data);
-  })
-  .catch(err => console.error(err));
-
-document.getElementById('searchInput').addEventListener('input', function () {
-  const keyword = this.value.trim().toLowerCase();
-  const list = document.getElementById('searchResults');
-  list.innerHTML = '';
-
-  if (!keyword) return;
-
-  searchData
-    .filter(item =>
-      item.title.toLowerCase().includes(keyword) ||
-      item.content.toLowerCase().includes(keyword)
-    )
-    .forEach(item => {
-      const li = document.createElement('li');
-      li.innerHTML = `<a href="${item.url}">${item.title}</a>`;
-      list.appendChild(li);
-    });
-});
-</script>
-
-<input
+   
+<body>
+    <input
   type="text"
   id="productSearch"
-  placeholder="搜索商品名称..."
+  placeholder="搜索商品..."
   style="width: 300px; padding: 8px; margin-bottom: 10px;"
->
-
-<input type="text" id="productSearch" placeholder="搜索商品...">
-
+    >
  
-<body>
   <header><h1>粮油货物清单</h1></header>
   <div class="nav">
     <button onclick="show('grains')">五谷杂粮</button>
@@ -822,8 +775,23 @@ document.getElementById('searchInput').addEventListener('input', function () {
       document.getElementById('modal').style.display = 'flex';
     }
   </script>
+
+ <script>
+document.getElementById('productSearch').addEventListener('input', function () {
+  const keyword = this.value.toLowerCase().trim();
+  const rows = document.querySelectorAll('#productTable tbody tr');
+
+  rows.forEach(row => {
+    const text = row.textContent.toLowerCase();
+    row.style.display = text.includes(keyword) ? '' : 'none';
+  });
+});
+</script>
+
+ 
 </body>
 </html>
+
 
 
 
