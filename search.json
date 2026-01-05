@@ -1,17 +1,8 @@
 [
   {
-    "title": "粮油货物进货价格表",
-    "url": "/pages/price.html",
-    "content": "粮油 进货 价格 美元 库存 总金额"
-  },
-  {
-    "title": "公司介绍",
-    "url": "/pages/about.html",
-    "content": "丰收粮油贸易公司 简介 业务"
-  },
-  {
-    "title": "联系我们",
-    "url": "/pages/contact.html",
-    "content": "联系方式 电话 邮箱 地址"
+    "title": "粮油货物清单",
+    "url": "/index.html",
+    "content": "五谷杂粮 油 调料 干货 好吃的 生活日用品 酒精 口罩 药 太阳能 蓝牙 有线耳机 蚊帐 床单被子 肉类 女性专用"
   }
 ]
+
