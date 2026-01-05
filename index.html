@@ -21,6 +21,54 @@
     .modal img { max-width: 90%; max-height: 90%; }
   </style>
 </head>
+
+<div style="margin:20px 0;">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="搜索网站内容..."
+    style="width:320px;padding:10px;font-size:16px;"
+  >
+</div>
+
+<ul id="searchResults" style="list-style:none;padding-left:0;"></ul>
+
+ <script>
+let searchData = [];
+
+fetch('/search.json')
+  .then(res => res.json())
+  .then(data => searchData = data);
+
+document.getElementById('searchInput').addEventListener('input', function () {
+  const keyword = this.value.trim().toLowerCase();
+  const list = document.getElementById('searchResults');
+  list.innerHTML = '';
+
+  if (!keyword) return;
+
+  searchData
+    .filter(item =>
+      item.title.toLowerCase().includes(keyword) ||
+      item.content.toLowerCase().includes(keyword)
+    )
+    .forEach(item => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <a href="${item.url}" style="text-decoration:none;color:#305496;">
+          ${item.title}
+        </a>
+      `;
+      li.style.margin = '8px 0';
+      list.appendChild(li);
+    });
+});
+</script>
+
+
+
+
+ 
 <body>
   <header><h1>粮油货物清单</h1></header>
   <div class="nav">
@@ -767,6 +815,7 @@
   </script>
 </body>
 </html>
+
 
 
 
