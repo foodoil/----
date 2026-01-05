@@ -758,39 +758,28 @@
   </div>
 
 
- 
-  <div id="modal" class="modal" onclick="this.style.display='none';">
-    <img id="modalImg" src="" alt="放大图">
-  </div>
-
-  <footer><p>© 2025 诚信粮油</p></footer>
-
-  <script>
-    function show(id) {
-      document.querySelectorAll('.grid').forEach(g => g.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-    function zoom(src) {
-      document.getElementById('modalImg').src = src;
-      document.getElementById('modal').style.display = 'flex';
-    }
-  </script>
-
  <script>
-document.getElementById('productSearch').addEventListener('input', function () {
-  const keyword = this.value.toLowerCase().trim();
-  const rows = document.querySelectorAll('#productTable tbody tr');
+const input = document.getElementById('productSearch');
+// 选择所有商品 div，这里用你现有的主 class，比如 product-item
+const items = document.querySelectorAll('#productList .product-item');
 
-  rows.forEach(row => {
-    const text = row.textContent.toLowerCase();
-    row.style.display = text.includes(keyword) ? '' : 'none';
+input.addEventListener('input', function () {
+  const keyword = this.value.toLowerCase().trim();
+
+  items.forEach(item => {
+    // 只搜索文本内容，不动 class / id
+    const text = item.textContent.toLowerCase();
+    item.style.display = text.includes(keyword) ? '' : 'none';
   });
 });
 </script>
 
+
+
  
 </body>
 </html>
+
 
 
 
