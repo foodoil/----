@@ -19,22 +19,106 @@
     .card p { color: #e91e63; margin: 0; font-size: 13px; }
     .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; }
     .modal img { max-width: 90%; max-height: 90%; }
-   
   </style>
 </head>
 
+<div style="margin:20px 0;">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="搜索网站内容..."
+    style="width:320px;padding:10px;font-size:16px;"
+  >
+</div>
 
-   
-<body>
-    <input
+<ul id="searchResults" style="list-style:none;padding-left:0;"></ul>
+
+<script>
+const repo = '----';   // 你的仓库名
+let searchData = [];
+
+fetch(`/${repo}/search.json`)
+  .then(res => {
+    if (!res.ok) throw new Error('search.json 加载失败');
+    return res.json();
+  })
+  .then(data => {
+    searchData = data;
+    console.log('搜索数据已加载', data);
+  })
+  .catch(err => console.error(err));
+
+document.getElementById('searchInput').addEventListener('input', function () {
+  const keyword = this.value.trim().toLowerCase();
+  const list = document.getElementById('searchResults');
+  list.innerHTML = '';
+
+  if (!keyword) return;
+
+  searchData
+    .filter(item =>
+      item.title.toLowerCase().includes(keyword) ||
+      item.content.toLowerCase().includes(keyword)
+    )
+    .forEach(item => {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+      list.appendChild(li);
+    });
+});
+</script>
+
+<input
   type="text"
   id="productSearch"
-  placeholder="搜索商品..."
+  placeholder="搜索商品名称..."
   style="width: 300px; padding: 8px; margin-bottom: 10px;"
-    >
- 
-  <header><h1>粮油货物清单</h1></header>
+>
 
+<table id="productTable" border="1" cellspacing="0" cellpadding="6">
+  <thead>
+    <tr>
+      <th>商品名称</th>
+      <th>分类</th>
+      <th>价格</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>玉米油</td>
+      <td>食用油</td>
+      <td>$10</td>
+    </tr>
+    <tr>
+      <td>口罩</td>
+      <td>医疗用品</td>
+      <td>$2</td>
+    </tr>
+    <tr>
+      <td>蓝牙耳机</td>
+      <td>电子产品</td>
+      <td>$30</td>
+    </tr>
+  </tbody>
+</table>
+
+ <script>
+document.getElementById('productSearch').addEventListener('input', function () {
+  const keyword = this.value.toLowerCase().trim();
+  const rows = document.querySelectorAll('#productTable tbody tr');
+
+  rows.forEach(row => {
+    const text = row.textContent.toLowerCase();
+    row.style.display = text.includes(keyword) ? '' : 'none';
+  });
+});
+</script>
+
+
+
+ 
+<body>
+  <header><h1>粮油货物清单</h1></header>
   <div class="nav">
     <button onclick="show('grains')">五谷杂粮</button>
     <button onclick="show('oil')">油、调料</button>
@@ -760,21 +844,25 @@
   </div>
 
 
-
-
-
  
+  <div id="modal" class="modal" onclick="this.style.display='none';">
+    <img id="modalImg" src="" alt="放大图">
+  </div>
+
+  <footer><p>© 2025 诚信粮油</p></footer>
+
+  <script>
+    function show(id) {
+      document.querySelectorAll('.grid').forEach(g => g.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    function zoom(src) {
+      document.getElementById('modalImg').src = src;
+      document.getElementById('modal').style.display = 'flex';
+    }
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
 
 
