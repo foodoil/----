@@ -22,12 +22,16 @@
   </style>
 </head>
 
-
-
-
-
  
 <body>
+
+  <input
+  type="text"
+  id="productSearch"
+  placeholder="搜索商品名称或价格..."
+  style="width:280px;padding:8px;margin:10px 0;"
+>
+ 
   <header><h1>粮油货物清单</h1></header>
   <div class="nav">
     <button onclick="show('grains')">五谷杂粮</button>
@@ -752,8 +756,6 @@
    
     <!-- 更多商品可按格式继续添加 -->
   </div>
-
-
  
   <div id="modal" class="modal" onclick="this.style.display='none';">
     <img id="modalImg" src="" alt="放大图">
@@ -771,8 +773,44 @@
       document.getElementById('modal').style.display = 'flex';
     }
   </script>
+
+
+
+
+
+
+
+
+ 
+ <script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const input = document.getElementById('productSearch');
+  const items = document.querySelectorAll('.card'); // 🔴 关键点就在这里
+
+  if (!input || items.length === 0) {
+    console.warn('搜索功能未绑定成功');
+    return;
+  }
+
+  input.addEventListener('input', function () {
+    const keyword = this.value.trim().toLowerCase();
+
+    items.forEach(card => {
+      // 只读取文本，不动HTML结构，不影响onclick
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(keyword) ? '' : 'none';
+    });
+  });
+
+});
+</script>
+
+
+ 
 </body>
 </html>
+
 
 
 
