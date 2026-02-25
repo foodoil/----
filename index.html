@@ -34,7 +34,8 @@
  
   <header><h1>粮油货物清单</h1></header>
   <div class="nav">
-    <button onclick="show('grains')">五谷杂粮</button>
+   <button onclick="show('woman')">新货</button>
+   <button onclick="show('grains')">五谷杂粮</button>
     <button onclick="show('oil')">油、调料</button>
     <button onclick="show('dry')">干货</button>
     <button onclick="show('food')">好吃的</button>
@@ -45,8 +46,46 @@
    <button onclick="show('eat')">肉类</button>
    <button onclick="show('woman')">女性专用</button>
    
+   
   </div>
 
+
+    <div id="eat" class="grid">
+    <!-- 肉类 -->
+    <!-- BEGIN ALCOHOL -->
+
+  
+     <div class="card"><img src="images/E乳.jpg"  onclick="zoom(this.src)"><h3>E乳</h3><p>＄0.5/瓶</p></div>
+     <div class="card"><img src="images/SOKANY电饭锅.png"  onclick="zoom(this.src)"><h3>SOKANY电饭锅</h3><p>＄20/个</p></div>
+     <div class="card"><img src="images/柏氏润色修颜隔离乳35ml.jpg"  onclick="zoom(this.src)"><h3>柏氏润色修颜隔离乳35ml</h3><p>＄7.5/个</p></div>
+     <div class="card"><img src="images/串烧鱼丸.png"  onclick="zoom(this.src)"><h3>串烧鱼丸</h3><p>＄2.8/袋</p></div>
+     <div class="card"><img src="images/德运纯奶粉.jpg"  onclick="zoom(this.src)"><h3>德运纯奶粉</h3><p>＄15/袋（1KG）</p></div>
+     <div class="card"><img src="images/防晒面罩.png"  onclick="zoom(this.src)"><h3>防晒面罩</h3><p>＄1/个</p></div>
+          <div class="card"><img src="images/防晒头巾.png"  onclick="zoom(this.src)"><h3>防晒头巾</h3><p>＄1/个</p></div>
+     <div class="card"><img src="images/挂式耳机.jpg"  onclick="zoom(this.src)"><h3>挂式耳机（有单孔和台式机双孔的）</h3><p>＄5/个</p></div>
+     <div class="card"><img src="images/惠普U盘.jpg"  onclick="zoom(this.src)"><h3>惠普U盘</h3><p>128G的10＄；64G的7.5＄</p></div>
+          <div class="card"><img src="images/金属耳机.jpg"  onclick="zoom(this.src)"><h3>金属耳机</h3><p>＄2.5/个</p></div>
+     <div class="card"><img src="images/精品电热水壶.png"  onclick="zoom(this.src)"><h3>精品电热水壶</h3><p>＄9/个</p></div>
+     <div class="card"><img src="images/诺丽果香皂.jpg"  onclick="zoom(this.src)"><h3>诺丽果香皂</h3><p>＄6.5/个</p></div>
+          <div class="card"><img src="images/越南防脱发洗头膏-新.png"  onclick="zoom(this.src)"><h3>越南防脱发洗头膏-新</h3><p>＄3.5/瓶</p></div>
+     <div class="card"><img src="images/折叠桌子.jpg"  onclick="zoom(this.src)"><h3>折叠桌子</h3><p>70*40*28的11$，70*48*32的12$</p></div>
+     <div class="card"><img src="images/竹凉垫.jpg"  onclick="zoom(this.src)"><h3>竹凉垫</h3><p>＄3/个</p></div>
+     <div class="card"><img src="images/1米竹凉席.jpg"  onclick="zoom(this.src)"><h3>1米竹凉席</h3><p>＄8/个</p></div>
+     <div class="card"><img src="images/金银花.jpg"  onclick="zoom(this.src)"><h3>金银花</h3><p>＄4/半斤</p></div>
+          <div class="card"><img src="images/白菊花.png"  onclick="zoom(this.src)"><h3>白菊花</h3><p>＄4/半斤</p></div>
+     <div class="card"><img src="images/胎菊.jpg"  onclick="zoom(this.src)"><h3>胎菊</h3><p>＄4/半斤</p></div>
+     
+     <div class="card"><img src="images/BOLUNZI女士折叠修眉刀.jpg"  onclick="zoom(this.src)"><h3>BOLUNZI女士折叠修眉刀</h3><p>2500/个</p></div>
+     <div class="card"><img src="images/水宝莲修眉刀.jpg"  onclick="zoom(this.src)"><h3>水宝莲修眉刀</h3><p>1500/个</p></div>
+     <div class="card"><img src="images/吉利佐爵旋开式老式双面刀片剃须刀.jpg"  onclick="zoom(this.src)"><h3>吉利佐爵旋开式老式双面刀片剃须刀</h3><p>＄1.5/个</p></div>
+     <div class="card"><img src="images/吉利锋速5片装刀片刮胡子双面刀片.jpg"  onclick="zoom(this.src)"><h3>吉利锋速5片装刀片刮胡子双面刀片</h3><p>＄0.5/包</p></div>
+     
+     
+    <!-- 更多商品可按格式继续添加 -->
+  </div>
+
+
+ 
   <div id="grains" class="grid active">
     <!-- 五谷杂粮商品 -->
     <!-- BEGIN GRAINS -->    
@@ -423,11 +462,7 @@
     <div class="card"><img src="images/面包.png"  onclick="zoom(this.src)"><h3>面包</h3><p>1000/个</p></div>
    <div class="card"><img src="images/蛋黄饼.png"  onclick="zoom(this.src)"><h3>蛋黄饼</h3><p>12000/盒</p></div>
 
-  
 
-   
-
-     <div class="card"><img src="images/蜜桃.png"  onclick="zoom(this.src)"><h3>蜜桃</h3><p>500/小包</p></div>
      <div class="card"><img src="images/鸡汤焗鹌鹑蛋.png"  onclick="zoom(this.src)"><h3>鸡汤焗鹌鹑蛋</h3><p>15000/斤</p></div>
    <div class="card"><img src="images/鹌鹑蛋.png"  onclick="zoom(this.src)"><h3>鹌鹑蛋</h3><p>2.8/包(30袋)</p></div>
 
@@ -640,8 +675,7 @@
     <div class="card"><img src="images/打火机.png"  onclick="zoom(this.src)"><h3>打火机</h3><p>20000/盒（50个）</p></div>
 
      <div class="card"><img src="images/好毛巾.png"  onclick="zoom(this.src)"><h3>好毛巾</h3><p>＄1.8/个</p></div>
-    <div class="card"><img src="images/毛巾.png"  onclick="zoom(this.src)"><h3>毛巾</h3><p>1500/个</p></div>
-    <div class="card"><img src="images/浴巾.png"  onclick="zoom(this.src)"><h3>浴巾</h3><p>4500/个</p></div>
+
     <div class="card"><img src="images/小毛巾布.png"  onclick="zoom(this.src)"><h3>小毛巾布</h3><p>1000/个</p></div>
 
     <div class="card"><img src="images/半指手套.png"  onclick="zoom(this.src)"><h3>半指手套</h3><p>2000/个</p></div>
@@ -878,6 +912,7 @@ document.addEventListener('DOMContentLoaded', function () {
  
 </body>
 </html>
+
 
 
 
